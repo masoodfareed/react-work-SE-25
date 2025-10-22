@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 import InpiutHandler from './components/InputHandler';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import CardProfiler from './components/CardProfiler';
+import FetchData from './components/FetchData';
 
 function App() {
    return(
@@ -13,12 +14,13 @@ function App() {
       <BrowserRouter>
         <nav>
             <Link to="/">Card Profiler</Link> | <Link to="/counter">Counter</Link> | 
-            <Link to="/inputhandler">Input Handler</Link>
+            <Link to="/inputhandler">Input Handler</Link> | <Link to="/fetchdata">Fetch Data</Link>
         </nav>
         <Routes>
            <Route path='/' element={<CardProfiler />} ></Route>
             <Route path='/counter' element={<Counter />} ></Route>
              <Route path='/inputhandler' element={<InpiutHandler />} ></Route>
+             <Route path='/fetchdata' element={<FetchData />} ></Route>
         </Routes>
     </BrowserRouter>
     </>
